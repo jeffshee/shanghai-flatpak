@@ -18,6 +18,9 @@ else
     echo "Target directory exists and is not empty. Skipping extraction."
 fi
 
+# Change directory to target directory
+cd "$target_dir" || exit 1
+
 # Check if executable exists
 if [ -x "$executable" ]; then
     # Execute ShanghaiEXE.exe
