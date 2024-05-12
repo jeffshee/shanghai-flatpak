@@ -1,31 +1,4 @@
 #!/bin/bash
 
-# Define paths
-source_tar="/app/share/shanghai-exe/ShanghaiEXE_05XXeWIPX_Linux.tar.gz"
-target_dir="$HOME/.var/app/io.gitgud.shnecro.ShanghaiEXE/data/shanghai-exe"
-executable="$target_dir/KeyConfig.exe"
-
-# Check if target directory exists and is empty
-if [ ! -d "$target_dir" ] || [ -z "$(ls -A "$target_dir")" ]; then
-    # Create target directory if it doesn't exist
-    mkdir -p "$target_dir"
-    
-    # Extract tar.gz file into target directory
-    tar -xzf "$source_tar" -C "$target_dir"
-    
-    echo "Extraction completed successfully."
-else
-    echo "Target directory exists and is not empty. Skipping extraction."
-fi
-
-# Change directory to target directory
-cd "$target_dir" || exit 1
-
-# Check if executable exists
-if [ -x "$executable" ]; then
-    # Execute ShanghaiEXE.exe
-    "$executable"
-else
-    echo "Executable file not found or is not executable: $executable"
-    exit 1
-fi
+# shellcheck source=/dev/null
+source /app/share/shanghai-exe/entrypoint.sh 'KeyConfig.exe'

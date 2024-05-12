@@ -8,7 +8,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --device=all
-  # - --share=network
+  - --share=network # To download launcher
 command: ShanghaiEXE
 modules:
   - name: krb5
@@ -55,15 +55,11 @@ modules:
     build-commands:
       - install -D KeyConfig /app/bin/KeyConfig
       - install -D ShanghaiEXE /app/bin/ShanghaiEXE
-      - mkdir -p /app/share/shanghai-exe
-      - cp -p ShanghaiEXE_05XXeWIPX_Linux.tar.gz /app/share/shanghai-exe/ShanghaiEXE_05XXeWIPX_Linux.tar.gz
+      - install -D entrypoint.sh /app/share/shanghai-exe/entrypoint.sh
     sources:
       - type: file
         path: KeyConfig
       - type: file
         path: ShanghaiEXE
-        # TODO: use remote url
       - type: file
-        path: ShanghaiEXE_05XXeWIPX_Linux.tar.gz
-        # url: https://gitgud.io/SHNecro/shanghaiexe/uploads/87b344807ea7b145b1f2ac9c37819aa5/ShanghaiEXE_05XXeWIPX_Linux.tar.gz
-        # sha256: 1b1496d235639926d8a164876fca7581afb45b5e566959e22a28e94033da9622
+        path: entrypoint.sh
