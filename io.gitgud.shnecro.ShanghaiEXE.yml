@@ -8,7 +8,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --device=all
-  - --share=network # To download launcher
+  - --share=network # for downloading the launcher
 command: ShanghaiEXE
 modules:
   - name: krb5
@@ -50,6 +50,12 @@ modules:
       - type: archive
         url: https://download.mono-project.com/sources/libgdiplus/libgdiplus-6.1.tar.gz
         sha256: 97d5a83d6d6d8f96c27fb7626f4ae11d3b38bc88a1726b4466aeb91451f3255b
+  - name: megatools # for downloading stuff from mega.nz
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://megatools.megous.com/builds/megatools-1.11.1.20230212.tar.gz
+        sha256: ecfa2ee4b277c601ebae648287311030aa4ca73ea61ee730bc66bef24ef19a34
   - name: shanghai-exe
     buildsystem: simple
     build-commands:
