@@ -24,3 +24,9 @@ flatpak run io.gitgud.shnecro.ShanghaiEXE
 # To launch the key config dialog
 flatpak run --command="KeyConfig" io.gitgud.shnecro.ShanghaiEXE
 ```
+
+## Credits
+- Continued development
+  - https://gitgud.io/SHNecro/shanghaiexe
+- Hi-Res app icon used in Flatpak
+  - Modified from [kuroさん's illustration](https://seiga.nicovideo.jp/seiga/im6716478)

@@ -56,10 +56,25 @@ modules:
       - install -D KeyConfig /app/bin/KeyConfig
       - install -D ShanghaiEXE /app/bin/ShanghaiEXE
       - install -D entrypoint.sh /app/share/shanghai-exe/entrypoint.sh
+      - install -Dm644 icon_origin_16x16.png /app/share/icons/hicolor/16x16/apps/io.gitgud.shnecro.ShanghaiEXE.png
+      - install -Dm644 icon_origin_32x32.png /app/share/icons/hicolor/32x32/apps/io.gitgud.shnecro.ShanghaiEXE.png
+      - install -Dm644 icon_origin_48x48.png /app/share/icons/hicolor/48x48/apps/io.gitgud.shnecro.ShanghaiEXE.png
+      - install -Dm644 icon.png /app/share/icons/hicolor/512x512/apps/io.gitgud.shnecro.ShanghaiEXE.png
+      - install -Dm644 io.gitgud.shnecro.ShanghaiEXE.desktop /app/share/applications/io.gitgud.shnecro.ShanghaiEXE.desktop
     sources:
       - type: file
-        path: KeyConfig
+        path: scripts/KeyConfig
       - type: file
-        path: ShanghaiEXE
+        path: scripts/ShanghaiEXE
       - type: file
-        path: entrypoint.sh
+        path: scripts/entrypoint.sh
+      - type: file
+        path: data/icon_origin_16x16.png
+      - type: file
+        path: data/icon_origin_32x32.png
+      - type: file
+        path: data/icon_origin_48x48.png
+      - type: file
+        path: data/icon.png
+      - type: file
+        path: data/io.gitgud.shnecro.ShanghaiEXE.desktop

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ShanghaiEXE
+Exec=ShanghaiEXE
+Icon=io.gitgud.shnecro.ShanghaiEXE
+Terminal=false
+Type=Application
+Categories=Game;
+StartupNotify=true
